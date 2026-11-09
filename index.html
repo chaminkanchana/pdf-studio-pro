@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF Studio Pro</title>
+    <meta name="description" content="All-in-one professional PDF editing, organization, conversion, and student document toolkit." />
+    <meta property="og:title" content="PDF Studio Pro" />
+    <meta property="og:description" content="All-in-one professional PDF editing, organization, conversion, and student document toolkit." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+      // Allow assignment to window.fetch for third-party browser extensions
+      try {
+        const _origFetch = window.fetch ? window.fetch.bind(window) : null;
+        let _activeFetch = _origFetch;
+        Object.defineProperty(window, 'fetch', {
+          get() {
+            return _activeFetch;
+          },
+          set(fn) {
+            _activeFetch = fn;
+          },
+          configurable: true,
+          enumerable: true
+        });
+      } catch (e) {
+        // Ignore if environment forbids redefinition
+      }
+
+      // Prevent third-party browser extension errors from interrupting the app
+      window.addEventListener('error', function(event) {
+        if (event.filename && event.filename.includes('chrome-extension://')) {
+          event.preventDefault();
+          event.stopImmediatePropagation();
+          return true;
+        }
+      }, true);
+    </script>
+  </head>
+  <body class="bg-[#F8FAFC] dark:bg-[#0B1120] text-slate-900 dark:text-slate-100 font-sans antialiased selection:bg-blue-600 selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
